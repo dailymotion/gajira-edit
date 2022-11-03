@@ -1,0 +1,27 @@
+name: Jira Issue Edition
+description: Edit specific Jira issue
+branding:
+  icon: 'chevron-right'
+  color: 'blue'
+inputs:
+  issue:
+    description: Key of the issue to be edited
+    required: true
+  project:
+    description: Key of the project
+    required: true
+  issuetype:
+    description: "Type of the issue to be edited. Example: 'Incident'"
+    required: true
+  summary:
+    description: Issue summary
+    required: true
+  description:
+    description: Issue description
+    required: false
+  fields:
+    description: Additional fields in JSON format
+    required: false
+runs:
+  using: 'node16'
+  main: './dist/index.js'
